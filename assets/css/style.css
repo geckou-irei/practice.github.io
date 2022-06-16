@@ -481,6 +481,7 @@ img {
 /* p-works
 /* ---------------------------- */
 .p-works {
+  margin-top: 40px;
   padding: 95px 0;
   background-color: #DAEAF1;
 }
