@@ -540,9 +540,10 @@ img {
   background-color: #B1B1B1;
 }
 .works-card__txt {
-  padding: 28px 18px;
+  padding: 28px 20px;
   font-size: 1.5rem;
   line-height: 1.5;
   background-color: #fff;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

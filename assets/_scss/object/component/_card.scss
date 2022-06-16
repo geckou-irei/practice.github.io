@@ -12,9 +12,10 @@
   }
 
   &__txt {
-    padding: 28px 18px;
+    padding: 28px 20px;
     font-size: f.rem(15);
     line-height: 1.5;
     background-color: f.$white;
+    text-align: center;
   }
 }
