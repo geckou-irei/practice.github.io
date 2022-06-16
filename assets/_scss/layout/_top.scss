@@ -98,6 +98,7 @@
     }
   }
   @media (max-width: 768px) {
+    _:lang(x)+_:-webkit-full-screen-document,
     &__inner {
       min-height: 300px;
       &__ttl {
@@ -107,6 +108,7 @@
         }
       }
     }
+    _:lang(x)+_:-webkit-full-screen-document,
     &__slide {
       min-height: 300px;
       &__item {
