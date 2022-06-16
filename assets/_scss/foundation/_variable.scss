@@ -16,3 +16,7 @@ $baseFontSize: 10;
   @return $pixels / $baseFontSize * 1rem;
 }
 
+$baseWidthSP: 375;
+@function vwSP($pixelsSP) {
+  @return $pixelsSP / $baseWidthSP * 100vw;
+}

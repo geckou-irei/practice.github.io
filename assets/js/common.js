@@ -8,10 +8,24 @@ $('.p-kv__slide').slick({
 });
 
 Vue.component('works-card', {
-  template: ' <div class = "works-card"><a href = "/" ><figure class = "works-card__img" ><img src = "/"alt = "" ></figure> <p class = "works-card__txt" >テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト </p></a></div>'
+  template: `
+  <div class="works-card">
+  <a href = "/" >
+    <figure class = "works-card__img" ><img src = "/"alt = "" ></figure>
+    <p class = "works-card__txt" >テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト </p>
+    </a>
+  </div>`
 })
 
-const app = new Vue ({
-  el: '#app'
+const app = new Vue({
+  el: '#app',
 })
 
+const header = new Vue({
+  el: '#header',
+  data() {
+    return {
+      open: false,
+    }
+  }
+})

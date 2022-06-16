@@ -18,14 +18,14 @@
 </head>
 
 <body>
-  <header class="l-header">
+  <header id="header" class="l-header">
     <div class="l-header__inner">
-      <div v-on:click="open!=open" class="g-head__btn">
+      <button @click="open = !open" class="l-header__btn">
         <span></span>
         <span></span>
         <span></span>
-      </div>
-      <nav class="l-header__nav" v-bind:class="{'is-active' : open}">
+      </button>
+      <nav :class="{'is-active' : open}" class="l-header__nav">
         <ul class="l-header__list">
           <li class="l-header__item"><a href="#area-1">ABOUT</a></li>
           <li class="l-header__item"><a href="#area-2">WORKS</a></li>
@@ -33,90 +33,80 @@
       </nav>
     </div>
   </header>
-  <div class="p-kv">
-    <div class="p-kv__inner">
-      <div class="p-kv__inner__ttl">
-        <div class="p-kv__inner__ttl__main">
-          <h1>
-            <span>BE</span>
-            <span>YOURSELF</span>
-          </h1>
+<div id="mainBlur" :class="{'is-blur' : open}">
+    <div class="p-kv">
+      <div class="p-kv__inner">
+        <div class="p-kv__inner__ttl">
+          <div class="p-kv__inner__ttl__main">
+            <h1>
+              <span>BE</span>
+              <span>YOURSELF</span>
+            </h1>
+          </div>
+          <div class="p-kv__inner__ttl__sub">
+            <h2>
+              <span>Yamada</span>
+              <span>Tarou</span>
+            </h2>
+          </div>
         </div>
-        <div class="p-kv__inner__ttl__sub">
-          <h2>
-            <span>Yamada</span>
-            <span>Tarou</span>
-          </h2>
-        </div>
-      </div>
-      <div class="p-kv__slide">
-        <div class="p-kv__slide__item">
-          <img src="assets/img/mv_01.jpg" alt="">
-        </div>
-        <div class="p-kv__slide__item">
-          <img src="assets/img/mv_02.jpg" alt="">
-        </div>
-        <div class="p-kv__slide__item">
-          <img src="assets/img/mv_03.jpg" alt="">
+        <div class="p-kv__slide">
+          <div class="p-kv__slide__item">
+            <img src="assets/img/mv_01.jpg" alt="">
+          </div>
+          <div class="p-kv__slide__item">
+            <img src="assets/img/mv_02.jpg" alt="">
+          </div>
+          <div class="p-kv__slide__item">
+            <img src="assets/img/mv_03.jpg" alt="">
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <main id="app" class="l-main">
-    <section id="area-1">
-      <div class="p-about">
-        <div class="u-wrap">
-          <div class="c-ttl__wrap">
-            <h2 class="c-ttl">ABOUT</h2>
-          </div>
-          <div class="p-about__flex">
-            <div class="p-about__img">
-              <img src="assets/img/thum_01.png" alt="">
+    <main id="app" class="l-main">
+      <section id="area-1">
+        <div class="p-about">
+          <div class="u-wrap">
+            <div class="c-ttl__wrap">
+              <h2 class="c-ttl">ABOUT</h2>
             </div>
-            <div class="p-about__bloc">
-              <div class="p-about__desc">
-                <h3 class="p-about__desc__ttl">山田 太郎</h3>
-                <p class="p-about__desc__txt">
-                  テキストテキストテキストテキストテキストテキスト
-                  テキストテキストテキストテキストテキストテキスト
-                  テキストテキストテキストテキストテキストテキスト
-                  テキストテキストテキストテキストテキストテキスト
-                  テキストテキストテキストテキストテキストテキスト
-                  テキストテキストテキストテキストテキスト
-                </p>
+            <div class="p-about__flex">
+              <div class="p-about__img">
+                <img src="assets/img/thum_01.png" alt="">
               </div>
-              <div class="p-about__btn">
-                <a href="/">More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="area-2">
-      <div class="p-works">
-        <div class="u-wrap">
-          <ul class="p-works__list">
-            <li class="p-works__item">
-              <works-card></works-card>
-              <!-- <div class="works-card">
-                <a href="/">
-                  <figure class="works-card__img">
-                    <img src="/" alt="">
-                  </figure>
-                  <p class="works-card__txt">
-                    テキストテキストテキストテキストテキスト
+              <div class="p-about__bloc">
+                <div class="p-about__desc">
+                  <h3 class="p-about__desc__ttl">山田 太郎</h3>
+                  <p class="p-about__desc__txt">
+                    テキストテキストテキストテキストテキストテキスト
+                    テキストテキストテキストテキストテキストテキスト
+                    テキストテキストテキストテキストテキストテキスト
+                    テキストテキストテキストテキストテキストテキスト
+                    テキストテキストテキストテキストテキストテキスト
                     テキストテキストテキストテキストテキスト
                   </p>
-                </a>
-              </div> -->
-
-            </li>
-          </ul>
+                </div>
+                <div class="p-about__btn">
+                  <a href="/">More</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+      <section id="area-2">
+        <div class="p-works">
+          <div class="u-wrap">
+            <ul class="p-works__list">
+              <li v-for="work of 6" :key="work" class="p-works__item">
+                <works-card></works-card>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>

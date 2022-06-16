@@ -3,6 +3,12 @@
 .works-card {
   a {
     display: block;
+    transition: opacity .2s ease-in;
+    @media (min-width: 769px) {
+      &:hover {
+        opacity: .5;
+      }
+    }
   }
 
   &__img {
