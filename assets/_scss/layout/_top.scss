@@ -216,3 +216,17 @@
   }
 }
 
+/* ---------------------------- */
+/* p-works
+/* ---------------------------- */
+.p-works {
+  padding: 95px 0;
+  background-color: #DAEAF1;
+  &__list {
+    display: flex;
+    gap: 0 15px 
+  }
+  &__item {
+    width: 350px;
+  }
+}
