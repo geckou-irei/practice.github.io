@@ -38,19 +38,19 @@
       &.is-active {
         right: 0;
         z-index: 999;
-        .l-header__item {
-          a {
-            font-size: f.vwSP(20);
-          }
-        }
-        .l-header__list {
-          position: absolute;
-          top: f.vwSP(90);
-          left: f.vwSP(30);
-          gap: 30px 0;
-          flex-direction: column;
-        }
       }
+    }
+    &__item {
+      a {
+        font-size: f.vwSP(20);
+      }
+    }
+    &__list {
+      position: absolute;
+      top: f.vwSP(90);
+      left: f.vwSP(30);
+      gap: 30px 0;
+      flex-direction: column;
     }
     &__btn {
       position: fixed;

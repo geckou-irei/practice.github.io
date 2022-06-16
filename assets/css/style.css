@@ -282,10 +282,10 @@ img {
     right: 0;
     z-index: 999;
   }
-  .l-header__nav.is-active .l-header__item a {
+  .l-header__item a {
     font-size: 5.3333333333vw;
   }
-  .l-header__nav.is-active .l-header__list {
+  .l-header__list {
     position: absolute;
     top: 24vw;
     left: 8vw;
