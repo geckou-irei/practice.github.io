@@ -1,0 +1,25 @@
+@use "../../foundation/import" as f;
+
+.c-ttl {
+  @include f.PTserif;
+  position: relative;
+  display: inline-block;
+  font-size: 3.5rem;
+  font-weight: 700;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -12.5px;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 1px;
+    background-color: #000000;
+  }
+  &__wrap {
+    text-align: center;
+    &.left {
+      text-align: left;
+    }
+  }
+}

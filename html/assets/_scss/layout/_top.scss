@@ -1,0 +1,218 @@
+@use "../foundation/import" as f;
+
+/* ---------------------------- */
+/* p-kv
+/* ---------------------------- */
+.p-kv {
+  &__inner {
+    position: relative;
+    display: flex;
+    min-height: 600px;
+    background-color: #EEE9E6;
+    &__ttl {
+      position: absolute;
+      top: 67px;
+      left: f.vw(80);
+      z-index: 1;
+      &__main {
+        font-size: f.vw(82);
+        color: f.$gray;
+        letter-spacing: 0.01em;
+        span {
+          font-weight: 400;
+          &:first-of-type {
+            position: relative;
+            margin-right: f.vw(20);
+            &::after {
+              content: "";
+              position: absolute;
+              left: 1%;
+              bottom: 6px;
+              display: inline-block;
+              width: 101px;
+              height: 2px;
+              background-color: f.$gray;
+            }
+          }
+        }
+        @media (max-width: 768px) {
+          font-size: f.rem(35);
+          span {
+            &:first-of-type {
+              &::after {
+                left: 1px;
+                width: 42px;
+              }
+            }
+          }
+        }
+        @media (min-width: 1220px) {
+          font-size: f.rem(68);
+        }
+        @media (min-width: 1441px) {
+          font-size: f.rem(82);
+        }
+        
+      }
+
+      &__sub {
+        @include f.PTserif;
+        position: relative;
+        top: 70px;
+        left: f.vw(158);
+        font-size: f.vw(45);
+        font-weight: 400;
+        writing-mode: vertical-lr;
+        color: f.$gray;
+        letter-spacing: 0.01em;
+        span {
+          font-weight: 400;
+          &:first-of-type {
+            margin-bottom: f.vw(30);
+          }
+        }
+        @media (max-width: 768px) {
+          font-size: f.rem(20);
+        }
+        @media (min-width: 1220px) {
+          font-size: f.rem(37);
+          left: 143px;
+        }
+        @media (min-width: 1441px) {
+          font-size: f.rem(45);
+          left: f.vw(175);
+        }
+      }
+    }
+  }
+  &__slide {
+    margin-left: auto;
+    width: 79.17%;
+    min-height: 600px;
+    &__item {
+      height: 100%;
+      img {
+        min-height: 600px;
+        height: 100%;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    &__inner {
+      min-height: 300px;
+      &__ttl {
+        top: 30px;
+        &__sub {
+          top: 25px;
+        }
+      }
+    }
+    &__slide {
+      min-height: 300px;
+      &__item {
+        img {
+          min-height: 300px;
+        }
+      }
+    }
+  }
+}
+
+/* ---------------------------- */
+/* p-about
+/* ---------------------------- */
+
+.p-about {
+  &__flex {
+    margin: 58px auto 0;
+    width: 980px;
+    display: flex;
+    gap: 0 92px;
+  }
+  &__img {
+    position: relative;
+    width: 360px;
+    &::before {
+      @include f.fluidrotate;
+      content: "";
+      position: absolute;
+      top: -60px;
+      left: -98px;
+      display: block;
+      width: 360px;
+      height: 300px;
+      background-color: f.$lightblue;
+      z-index: -1;
+      animation: fluidrotate 10s ease-in-out infinite;
+    }
+  }
+  &__desc {
+    width: 426px;
+    &__ttl {
+      font-size: f.rem(32);
+    }
+    &__txt {
+      margin-top: 50px;
+      font-size: f.rem(18);
+      line-height: 1.8;
+    }
+  }
+  &__btn {
+    position: relative;
+    left: 110px;
+    margin-top: 38px;
+    font-size: f.rem(35);
+    text-align: right;
+    a {
+      position: relative;
+      transition: all .3s ease-in-out;
+      &::after {
+        content: "⇨";
+        margin-left: 8px;
+        display: inline-block;
+        font-size: f.rem(35);
+        vertical-align: middle;
+      }
+      &:hover {
+        color: #82acac;
+        letter-spacing: 0.2em;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    &__flex {
+      width: 100%;
+      flex-direction: column;
+    }
+    &__bloc {
+      margin-top: 32px;
+    }
+    &__desc {
+      width: 100%;
+      &__ttl {
+        text-align: center;
+      }
+      &__txt {
+        margin-top: 32px;
+        font-size: f.rem(14);
+      }
+    }
+    &__img {
+      margin: 0 auto;
+      width: 284px;
+      &::before {
+        top: -15%;
+        left: 5%;
+        width: 276px;
+        min-height: 236px;
+      }
+    }
+    &__btn {
+      position: static;
+      margin-top: 32px;
+      font-size: f.rem(20);
+      text-align: center;
+    }
+  }
+}
+

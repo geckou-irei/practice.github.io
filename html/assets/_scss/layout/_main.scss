@@ -1,0 +1,11 @@
+@use "../foundation/import" as f;
+
+/* ---------------------------- */
+/* main
+/* ---------------------------- */
+.l-main {
+  margin-top: f.vw(142);
+  @media (max-width: 768px) {
+    margin-top: 80px;
+  }
+}

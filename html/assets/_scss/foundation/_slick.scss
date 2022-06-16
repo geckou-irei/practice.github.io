@@ -1,0 +1,29 @@
+@use "../foundation/import"as f;
+
+/* ---------------------------- */
+/* slick
+/* ---------------------------- */
+
+.p-kv__slide {
+  &.slick-dotted.slick-slider {
+    margin-bottom: 0;
+  }
+  .slick-prev {
+    display: none !important;
+  }
+  .slick-next {
+    display: none !important;
+  }
+  
+  .slick-dots {
+    bottom: f.vw(10);
+    li button::before {
+      opacity: 1;
+      color: f.$white;
+    }
+    li.slick-active button::before {
+      opacity: .5;
+    }
+  }
+}
+

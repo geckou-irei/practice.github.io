@@ -1,0 +1,8 @@
+.u-wrap {
+  margin: 0 auto;
+  width: 1080px;
+  @media (max-width: 768px) {
+    padding: 0 20px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,24 @@
+@use "../foundation/import" as f;
+
+body {
+  min-width: 1120px;
+  @include f.PTserif;
+  color: f.$black;
+  @media (max-width: 768px) {
+    min-width: auto;
+  }
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  color: f.$black;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
