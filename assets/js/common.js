@@ -18,10 +18,6 @@ Vue.component('works-card', {
 
 const app = new Vue({
   el: '#app',
-  components: {
-    Carousel,
-    Slide
-  }
 })
 
 const header = new Vue({
