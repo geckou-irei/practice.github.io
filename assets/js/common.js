@@ -4,7 +4,6 @@ $('.p-kv__slide').slick({
   fade: true,
   slidesToShow: 1,
   slidesToScroll: 1,
-
 });
 
 Vue.component('works-card', {
@@ -19,6 +18,10 @@ Vue.component('works-card', {
 
 const app = new Vue({
   el: '#app',
+  components: {
+    Carousel,
+    Slide
+  }
 })
 
 const header = new Vue({
